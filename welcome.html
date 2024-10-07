@@ -1,0 +1,14 @@
+<script src="https://cdn.jsdelivr.net/npm/skapi-js@latest/dist/skapi.js"></script>
+<script src="init.js"></script>
+<h1 id="welcome_message"></h1>
+<script>
+    welcomeMessage = document.getElementById('welcome_message')
+    skapi.getProfile().then((profile) => {
+        console.log(profile);
+        welcomeMessage.innerHTML = `Welcome, ${profile.email}.`
+
+        if (profile === null) {
+        window.location.href = "login.html";
+        }
+    }).catch(err=>alert(err.message));
+</script>
