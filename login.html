@@ -1,0 +1,17 @@
+<script src="https://cdn.jsdelivr.net/npm/skapi-js@latest/dist/skapi.js"></script>
+<script src="init.js"></script>
+<!-- login.html -->
+<h1>Login</h1>
+<form action="welcome.html" onsubmit="skapi.login(event).catch(err=>alert(err.message))">
+    <label>
+        Email
+        <br>
+        <input type="email" name="email" placeholder="your@email.com" required>
+    </label><br><br>
+    <label>
+        Password
+        <br>
+        <input type="password" name="password" placeholder="Login password" required>
+    </label><br><br>
+    <input type="submit" value="Login">
+</form>
